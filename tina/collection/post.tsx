@@ -86,18 +86,9 @@ const Post: Collection = {
       list: true,
       fields: [
         {
-          type: 'reference',
+          type: "string",
           label: 'Tag',
           name: 'tag',
-          collections: ['tag'],
-          ui: {
-            optionComponent: (
-              props: {
-                name?: string;
-              },
-              _internalSys: { path: string }
-            ) => props.name || _internalSys.path,
-          },
         },
       ],
       ui: {
